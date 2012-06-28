@@ -9,14 +9,14 @@ var prime = [];
 
 for (var j = 2; j < 2000000; j++) {
   var isPrime = true;
-  for (var i = 0; i < prime.length && isPrime === true; i++) {
+  for (var i = 0; i < prime.length; i++) {
     if( j%prime[i] === 0) {
       isPrime = false;
+      i = prime.length;
     }
   }
-  if(isPrime){
+  if(isPrime)
     prime.push(j);
-  }
 }
 
 var soluce = 0;
